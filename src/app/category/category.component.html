@@ -3,13 +3,13 @@
     <mat-card>
       <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>{{product.name}}</mat-card-title>
-        <mat-card-subtitle>{{product.shortDescription}}</mat-card-subtitle>
+        <mat-card-title>{{product?.name}}</mat-card-title>
+        <mat-card-subtitle>{{product?.shortDescription}}</mat-card-subtitle>
       </mat-card-header>
-      <img mat-card-image src="{{'http:' + product.fullImage}}" alt="{{category}}">
+      <img mat-card-image src="{{'http:' + product?.fullImage}}" alt="{{category}}">
       <mat-card-content></mat-card-content>
       <mat-card-actions>
-        <button mat-button routerLink="{{'/product/' + product.partNumber}}">Ir a Producto</button>
+        <button mat-button routerLink="{{'/product/' + product?.partNumber}}">Ir a Producto</button>
       </mat-card-actions>
     </mat-card>
   </mat-grid-tile>
