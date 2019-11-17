@@ -1,10 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 
 import {ProductService} from '../services/product.service';
-import {SofaService} from '../services/sofa.service';
-import {TableService} from '../services/table.service';
-import {ShoeService} from '../services/shoe.service';
-import {MobileService} from '../services/mobile.service';
+import {CategoryService} from '../services/category.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -20,10 +17,7 @@ export class DashboardComponent implements OnInit {
 
   constructor(
     private productService: ProductService,
-    private sofaService: SofaService,
-    private tableService: TableService,
-    private shoeService: ShoeService,
-    private mobileService: MobileService
+    private categoryService: CategoryService,
   ) {
   }
 
@@ -32,19 +26,19 @@ export class DashboardComponent implements OnInit {
   }
 
   setRandomPhotos() {
-    this.productService.getProduct(this.sofaService.getRandomId()).subscribe(sofa => {
+    this.productService.getProduct(this.categoryService.getRandomCategoryId('sofas')).subscribe(sofa => {
       this.sofaImageURL = 'http:' + sofa.fullImage;
     });
 
-    this.productService.getProduct(this.tableService.getRandomId()).subscribe(table => {
+    this.productService.getProduct(this.categoryService.getRandomCategoryId('tables')).subscribe(table => {
       this.tableImageURL = 'http:' + table.fullImage;
     });
 
-    this.productService.getProduct(this.shoeService.getRandomId()).subscribe(shoe => {
+    this.productService.getProduct(this.categoryService.getRandomCategoryId('shoes')).subscribe(shoe => {
       this.shoeImageURL = 'http:' + shoe.fullImage;
     });
 
-    this.productService.getProduct(this.mobileService.getRandomId()).subscribe(mobile => {
+    this.productService.getProduct(this.categoryService.getRandomCategoryId('mobiles')).subscribe(mobile => {
       this.mobileImageURL = 'http:' + mobile.fullImage;
     });
   }
