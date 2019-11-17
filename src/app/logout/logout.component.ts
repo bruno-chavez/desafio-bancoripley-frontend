@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AngularFireAuth} from '@angular/fire/auth';
 import {Router} from '@angular/router';
 
@@ -9,7 +9,8 @@ import {Router} from '@angular/router';
 })
 export class LogoutComponent implements OnInit {
 
-  constructor(private angularFireAuth: AngularFireAuth, private router: Router) { }
+  constructor(private angularFireAuth: AngularFireAuth, private router: Router) {
+  }
 
   ngOnInit() {
   }
