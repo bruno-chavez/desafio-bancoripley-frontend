@@ -8,6 +8,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 import {AppComponent} from './app.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
@@ -28,7 +29,8 @@ import {ProductComponent} from './product/product.component';
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
-    MatGridListModule
+    MatGridListModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
