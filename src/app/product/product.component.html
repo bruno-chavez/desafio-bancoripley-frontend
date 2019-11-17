@@ -1,1 +1,16 @@
-<p>product works!</p>
+<mat-grid-list cols="2" rowHeight="800px" >
+  <mat-grid-tile>
+    <mat-card>
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{product?.name}}</mat-card-title>
+        <mat-card-subtitle>{{product?.shortDescription}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="{{'http:' + product?.fullImage}}" alt="{{product?.name}}">
+      <mat-card-content></mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div [innerHTML]="product?.longDescription"></div>
+  </mat-grid-tile>
+</mat-grid-list>
