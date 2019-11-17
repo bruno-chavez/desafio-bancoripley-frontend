@@ -17,8 +17,7 @@ export class DashboardComponent implements OnInit {
 
   constructor(
     private productService: ProductService,
-    private categoryService: CategoryService,
-  ) {
+    private categoryService: CategoryService) {
   }
 
   ngOnInit() {
