@@ -7,10 +7,28 @@
         <mat-card-subtitle>{{product?.shortDescription}}</mat-card-subtitle>
       </mat-card-header>
       <img mat-card-image src="{{'http:' + product?.fullImage}}" alt="{{product?.name}}">
-      <mat-card-content></mat-card-content>
+      <mat-card-content>
+        {{product.prices.formattedOfferPrice}}
+      </mat-card-content>
     </mat-card>
   </mat-grid-tile>
   <mat-grid-tile>
     <div [innerHTML]="product?.longDescription"></div>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <mat-card>
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+      </mat-card-header>
+      <img mat-card-image src="{{'http:' + product?.images[1]}}" alt="{{product?.name}}">
+      <mat-card-content>
+        <div *ngFor="let attribute of product?.attributes">
+          <p *ngIf="attribute.displayable">
+            {{attribute.name}}: {{attribute.value}}
+          </p>
+        </div>
+      </mat-card-content>
+    </mat-card>
   </mat-grid-tile>
 </mat-grid-list>
