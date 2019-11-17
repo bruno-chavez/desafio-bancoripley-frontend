@@ -4,8 +4,12 @@ import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppRoutingModule} from './app-routing.module';
 
-import {AppComponent} from './app.component';
+// Material design components
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import {MatGridListModule} from '@angular/material/grid-list';
 
+import {AppComponent} from './app.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {CategoryComponent} from './category/category.component';
 import {ProductComponent} from './product/product.component';
@@ -21,7 +25,10 @@ import {ProductComponent} from './product/product.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatButtonModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
